@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const city = ["Malang", "Surabaya", "Maluku"];
+
+        for (const place of city) {
+            document.writeln(`<p>${place}</p>`);
+        }//outputbya satu kota satu baris
+
+        const cit = "Malang Surabaya Maluku";
+        for (const character of cit) {
+            document.writeln(`<p>${character}</p>`);
+        }//munculnya perbaris satu huruf
+
+        /*
+        const city = {
+            Ibu Kota : "Surabaya"
+            kota : "Malang"
+        }
+        for (const place of city) {
+            document.writeln(`<p>${place}</p>`);
+        } 
+         */         //NANTI HASILNYA BAKAL EOR KARENA DATA OBJEK TIDAK ITERABLE
+    </script>
+</body>
+
+</html>

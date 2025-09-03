@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function outer() {              // fungsi luar
+            function inner() {          // fungsi dalam (hanya bisa dipanggil di outer)
+                console.info("halo");   // cetak ke console
+            }
+            inner();
+            inner();
+        }
+        outer();
+        inner();//kalo kayak gini bakal eror
+    </script>
+</body>
+
+</html>

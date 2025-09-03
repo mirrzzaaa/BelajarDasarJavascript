@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const restoran = {};
+
+        //ubah property/ atribute
+        restoran["Padang"] = "Nasi Padang";
+        restoran["Pagi sore"] = "Ayam Crispy";
+        restoran["Makmur"] = "Rawon";
+
+        delete restoran["Makmur"];
+
+        console.table(restoran);
+
+        const motor = {
+            "Kawazaki": "RZ20",
+            "Suzuki bagus": "Rz30",
+            "Xenia": "pink",
+        }
+        //Buat ganti nama property
+        console.info(`Kawazaki :${motor.Kawazaki}`);
+        console.info(`Suzuki :${motor["Suzuki bagus"]}`);
+
+        console.table(motor);
+    </script>
+</body>
+
+</html>

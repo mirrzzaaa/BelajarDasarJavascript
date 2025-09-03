@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //SCOPE GLOBAL
+        let counter = 0;
+        function hitMe() {
+            //local scope
+            counter++;
+        }
+        function other() {
+            //local scope
+        }
+        hitMe();
+        hitMe();
+        console.info(counter);
+
+        //SCOPE LOCAL
+
+        function first() {
+            let variabel = "Fist";
+            console.info(variabel);
+
+        }
+        function second() {
+            let secondvariabel = "second";
+        }
+        first();
+        second();
+        /*
+        console.info(variabel);//ini gak bisa perintahnya diletakkan diluar function 
+        console.info(secondvariabel);//eror jika dluar harus didalam function
+        */
+
+        // NESTED FUNCTION
+        function say() {
+            let sayHI = "HELOO";   // variabel lokal di say()
+
+            function name() {      // fungsi di dalam say()
+                console.info(sayHI); // bisa akses variabel di parent (closure)
+            }
+
+            name(); // dipanggil -> cetak "HELOO"
+        }
+
+        say(); // jalankan
+    </script>
+</body>
+
+</html>

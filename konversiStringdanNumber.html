@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const value1 = parseInt("1");
+        const value2 = 1;
+        const sum = value1 + value2;
+        document.writeln(`<p>${sum}</p>`);
+
+        document.writeln(`<p>${parseInt("1.9")}</p>`);
+        document.writeln(`<p>${parseFloat("1.1")}</p>`);
+        document.writeln(`<p>${Number("1.1")}</p>`);
+
+        const a = 1;
+        const b = 1;
+        const c = a.toString() + b.toString();
+        document.writeln(`<p>${c}</p>`);
+
+        document.writeln(`<p>${parseInt("salah")}</p>`);
+        document.writeln(`<p>${parseFloat("1.1Eko")}</p>`);//ini akan otomatis menghilankan 'eko nya'
+
+        document.writeln(`<p>${Number("salah")}</p>`);
+        document.writeln(`<p>${Number("1.1Eko")}</p>`);//ini akan otomatis menghilankan 'eko nya'
+
+        const e = Number("salah");
+        const f = 100;
+        const g = e + f;
+        document.writeln(`<p>${isNaN(g)}</p>`)
+        document.writeln(`<p>${isNaN(f)}</p>`)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const person = {
+            address: {
+                country: "Indonesia"
+            }
+        };
+        //const country = person.address.country;
+        //document.writeln(`(<p>${country}</p>)`);
+
+        //dikira gak ada masalah kalo gini karena addres nya emang undifined
+        //Dapat dilihat eror dibagian console
+
+        //menggunakan optional channing
+        alert(person?.address?.country);
+        document.writeln(`SUKSES`);
+
+    </script>
+</body>
+
+</html>

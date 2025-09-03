@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const name = "Mirza Marwa Rosyidah";
+        const template = `Name : ${name}`;
+        console.info(template);
+
+        document.writeln(template);
+
+        const fristName = "Fayola";
+        const middleName = "Carani";
+        const lastName = "Malya";
+
+        const full = `Nama : ${fristName} ${middleName} ${lastName}`;
+        document.writeln(full)
+        console.warn(full);
+
+        const value = 80;
+
+        const hai = `Nama : ${name}, Lulus : ${value > 60}`;
+        console.error(hai);
+        document.writeln(hai);
+
+        const multiline = `halo!
+        nama saya mirza
+        saya mahasiswa Teknologi Informasi
+        senang bertem dengan kalian`;
+
+        document.writeln("<pre>");
+        document.writeln(multiline);
+        document.writeln("</pre>");
+
+
+    </script>
+</body>
+
+</html>

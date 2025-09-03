@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //ini dengan kondisi didalam for
+        let counter = 1;
+        for (; counter <= 100;) {
+            document.writeln(`<p>Perulangan ke ${counter}</p>`);
+            counter++; /*dibuat ++ anagar perulangannya bisa false dan akhirnya berhenti*/
+        }
+
+        //let diletakkan dibagian init statement, jadi yang kososng cuma post statement
+        for (let cou = 1; cou <= 100;) {
+            document.writeln(`<p>Perulangan ke ${cou}</p>`);
+            cou++; /*dibuat ++ anagar perulangannya bisa false dan akhirnya berhenti*/
+        }
+
+        //++ nya dipindah ke ke post statement, jadi semua terisi punuh 
+        for (let cot = 1; cot <= 100; cot++) {
+            document.writeln(`<p>Perulangan ke ${cot}</p>`);
+        }
+
+    </script>
+</body>
+
+</html>

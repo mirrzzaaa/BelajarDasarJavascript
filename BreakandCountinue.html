@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //break, akan terjadi terus menurus juka tidak di break
+        let counter = 1;
+        while (true) {
+            document.writeln(`<p>Perulangan Ke-${counter}</p>`);
+            counter++;
+
+            if (counter > 10) {
+                break;
+            }
+        }
+
+        //continue (hanya meanampilkan perulangan genap sesuai perintah)
+        for (let cow = 1; cow <= 10; cow++) {
+            if (cow % 2 === 0) {
+                continue;
+            }
+            document.writeln(`<p>Perbandingan ke-${cow}</p>`);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /OR/
+        console.info("Hello" || "");
+        document.writeln("" || 0);
+        alert(null || {});
+
+        const nama = {
+            orang1: "",
+            orang2: 0,
+        }
+        const person = nama.orang1 || nama.orang2;
+        console.error(person);
+
+        /*apa bedanya sama nullish terletak pada sayrat nya nulish itu
+        tipe data null dan undifined, sedangkan OR nonBolean tipe datanya
+        lebih dari itu  */
+
+        /AND/
+
+        console.info("Hello" && {});
+        document.writeln(-0 && {});
+        document.writeln(3 && "HAi ");
+
+    </script>
+</body>
+
+</html>

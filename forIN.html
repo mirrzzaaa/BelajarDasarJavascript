@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //object
+        const motor = {
+            "Kawazaki": "RZ20",
+            "Suzuki bagus": "Rz30",
+            "Xenia": "pink",
+        }
+
+        for (const property in motor) {
+            document.writeln(`<p>${property}</p>`);
+            // bisa juga kayak gini biar value properti keliatan
+            //(`<p>${property} : ${motor[property]}</p>`);
+        }
+
+        //array
+        for (const index in motor) {
+            document.writeln(`<p>${index} : ${motor[index]}</p>`);
+        }
+    </script>
+</body>
+
+</html>

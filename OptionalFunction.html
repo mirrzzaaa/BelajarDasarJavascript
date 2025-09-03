@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sayHello(firstName, lastName) {
+            document.writeln(`<p> Hello ${firstName} ${lastName}<p>`);
+        }
+        sayHello("Mirza");
+        sayHello("Mirza", "marwa", "Rosyidah");
+        /*harusnya kan cuma dua tapi saat ditulis tiga itu tetap jalan /
+        enggak eror, sekilas menguntungkan namun nanti bisa jadi masalah karena
+        tidak terlihat erornya dibagian mana */
+    </script>
+</body>
+
+</html>
