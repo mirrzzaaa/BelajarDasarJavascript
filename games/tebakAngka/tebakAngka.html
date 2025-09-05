@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Game Tebak Angka</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* penuh layar */
+            background: linear-gradient(135deg, #f374c7, #40f740);
+            /* background gradasi */
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        input {
+            padding: 10px;
+            width: 80px;
+            text-align: center;
+            border: 2px solid #f374c7;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px 5px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        #btnTebak {
+            background: #f374c7;
+            color: white;
+        }
+
+        #btnTebak:hover {
+            background: #f374c7;
+        }
+
+        #btnMainLagi {
+            background: #139813;
+            color: white;
+        }
+
+        #btnMainLagi:hover {
+            background: #139813;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Game Tebak Angka</h1>
+        <p>Saya sudah memilih angka antara <b>1 - 100</b>. Coba tebak!</p>
+
+        <input type="number" id="tebakan" min="1" max="100">
+        <button id="btnTebak" onclick="cekTebakan()">Tebak!</button>
+        <button id="btnMainLagi" onclick="resetGame()" style="display:none;">Main Lagi 🔄</button>
+
+        <p id="hasil"></p>
+    </div>
+
+    <script>
+        let angkaBenar;
+        resetGame();
+
+        function cekTebakan() {
+            let tebakan = parseInt(document.getElementById("tebakan").value);
+            let hasil = document.getElementById("hasil");
+
+            if (isNaN(tebakan)) {
+                hasil.innerHTML = "Masukkan angka dulu!";
+                return;
+            }
+
+            if (tebakan === angkaBenar) {
+                hasil.innerHTML = "🎉 Selamat! Angka benar adalah " + angkaBenar;
+                document.getElementById("btnTebak").style.display = "none";
+                document.getElementById("btnMainLagi").style.display = "inline-block";
+            } else if (tebakan > angkaBenar) {
+                hasil.innerHTML = "Terlalu besar! Coba lagi.";
+            } else {
+                hasil.innerHTML = "Terlalu kecil! Coba lagi.";
+            }
+            document.getElementById("tebakan").value = "";
+        }
+
+        function resetGame() {
+            angkaBenar = Math.floor(Math.random() * 100) + 1;
+            document.getElementById("hasil").innerHTML = "";
+            document.getElementById("tebakan").value = "";
+            document.getElementById("btnTebak").style.display = "inline-block";
+            document.getElementById("btnMainLagi").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
